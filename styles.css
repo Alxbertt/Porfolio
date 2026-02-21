@@ -189,11 +189,16 @@ nav{
     color:#028e9a;
     transform: scale(1.5);
 }
-
 /*about section*/
 
 #about-container{
-   
+
+   display: grid; 
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem; 
+   max-width: 1100px; 
+   margin: 200px 200px;
+   padding: 2rem
     
 }
 
@@ -219,9 +224,25 @@ nav{
     box-sizing: border-box;
 }
 
+/* Experiencie section*/
+#Experiencie-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 200px;
+    padding: 2rem;
+}
 
+.Experiencie-title{
+    color:antiquewhite;
+}
 
-
+.Experiencie-text{
+    margin: auto 0 0 20px;
+    text-align: justify;
+   order: 1;
+}
 
 /*CELL ADAPTATIVE SCREEN*/
 @media screen and (max-width: 768px) {
@@ -255,14 +276,14 @@ nav{
     }
 
     #about-container{
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
+        grid-template-columns: 1fr;
+        justify-self: start;
+        
     }
         
     .about-text{
-        order:2;
-        margin-top: 1rem;
+        justify-self:start;
+        
     }
 
     .about-title{
